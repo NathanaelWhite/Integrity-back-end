@@ -1,5 +1,5 @@
 const { Schema, Mongoose } = require("mongoose");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 
 const statesArray = [
   "AL",
@@ -92,7 +92,7 @@ const userSchema = new Schema({
       type: String,
       uppercase: true,
       required: true,
-      enum: statesArr,
+      enum: statesArray,
     },
     zip: Number,
   },

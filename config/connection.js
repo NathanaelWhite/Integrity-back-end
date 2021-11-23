@@ -1,10 +1,5 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/integritysandc', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/integritysandc');
 
-module.exports = mongoose.connection
+module.exports = mongoose.connection;

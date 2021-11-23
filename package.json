@@ -1,10 +1,12 @@
 {
-  "name": "Integrity-back-end",
+  "name": "mern-server",
   "version": "1.0.0",
-  "description": "Back end code for an Integrity Strength and Conditioning Gym Website",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "watch": "nodemon",
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,8 @@
     "express": "^4.17.1",
     "graphql": "^16.0.1",
     "mongoose": "^6.0.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }
