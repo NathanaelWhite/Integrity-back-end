@@ -1,4 +1,5 @@
 const { Schema, Mongoose } = require("mongoose");
+const membershipSchema = require('./Membership');
 const bcrypt = require("bcrypt");
 
 const statesArray = [
@@ -92,15 +93,29 @@ const userSchema = new Schema({
       type: String,
       uppercase: true,
       required: true,
-      enum: statesArr,
+      enum: statesArray,
     },
-    zip: Number,
+    areaCode: Number,
   },
   waiver: {
     type: Boolean,
     required: true,
   },
+  membership: [membershipSchema]
 });
+
+// set up pre-save middleware to create a password
+userSchema.pre('save', async function(next) {
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+  next();
+});
+// compare the incoming password with the hashed password
+userSchema.methods.isCorrectPassword = async function(password) {
+  return await bcrypt.compare(password, this.password);
+};
 
 const User = Mongoose.model('User', userSchema);
 
