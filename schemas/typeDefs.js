@@ -38,7 +38,11 @@ const typeDefs = gql`
         checkout(memberships: [ID]!): Checkout
     }
     type Mutation {
-        addUser(firstName: String!, )
+        addUser(firstName: String!, lastName: String!, gender: String!, email: String!, phoneNumber: String! password: String!, birthday: String!, address: String!, waiver: String!): Auth
+        addSubscription(membership: [ID]!): Subscription
+        updateUser(firstName: String!, lastName: String!, gender: String!, email: String!, phoneNumber: String! password: String!, birthday: String!, address: String!, waiver: String!): User
+        updateMembership(_id: ID!, memType: String!): Membership
+        login(email: String!, password: String!): Auth  
     }
 `;
 
