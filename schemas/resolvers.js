@@ -5,9 +5,9 @@ const { User, Membership } = require('../models');
 
 const resolvers = {
     Query: {
-        helloWorld: () => {
-            return 'hello world';
-        }
+       memberships: async () => {
+           return await Membership.find();
+       }
     }
 };
 

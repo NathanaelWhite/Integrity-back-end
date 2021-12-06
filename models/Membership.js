@@ -1,4 +1,5 @@
-const { Schema, Mongoose } = require('mongoose');
+const mongoose = require('mongoose');
+const { Schema } = mongoose
 
 const membershipSchema = new Schema({
     memType: {
@@ -14,6 +15,6 @@ const membershipSchema = new Schema({
     },
 });
 
-const Membership = Mongoose.model('Membership', membershipSchema);
+const Membership = mongoose.model('Membership', membershipSchema);
 
 module.exports = Membership;

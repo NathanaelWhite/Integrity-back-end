@@ -1,5 +1,6 @@
-const { Schema, Mongoose } = require("mongoose");
-const membershipSchema = require('./Membership');
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
+const Membership = require('./Membership');
 const bcrypt = require("bcrypt");
 
 const statesArray = [
@@ -101,7 +102,7 @@ const userSchema = new Schema({
     type: Boolean,
     required: true,
   },
-  membership: [membershipSchema]
+  membership: [Membership.schema]
 });
 
 // set up pre-save middleware to create a password
@@ -112,11 +113,11 @@ userSchema.pre('save', async function(next) {
   }
   next();
 });
-// compare the incoming password with the hashed password
+// compare the incoming password with the hashed
 userSchema.methods.isCorrectPassword = async function(password) {
   return await bcrypt.compare(password, this.password);
 };
 
-const User = Mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;
