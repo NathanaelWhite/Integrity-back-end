@@ -7,4 +7,3 @@ Back end code for an Integrity Strength and Conditioning Gym Website
 - NodeJS
 - ExpressJS
 - MongoDB
-- GraphQL

@@ -7,7 +7,7 @@ const resolvers = {
     Query: {
        memberships: async () => {
            return await Membership.find();
-       }
+       },
     }
 };
 
