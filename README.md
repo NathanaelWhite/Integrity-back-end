@@ -1,6 +1,6 @@
-# Integrity-back-end
+# Integrity-Strength&Conditioning
 
-Back end code for an Integrity Strength and Conditioning Gym Website
+a mocl-up application for Integrity Strength and Conditioning
 
 ## Built With
 
