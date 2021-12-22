@@ -11,6 +11,11 @@ mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/integritysandc"
 );
 
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log("MongoDB database connection established");
+})
+
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}`);
 });
