@@ -1,6 +1,6 @@
 # Integrity-Strength&Conditioning
 
-a mocl-up application for Integrity Strength and Conditioning
+a mock-up application for Integrity Strength and Conditioning
 
 ## Built With
 
