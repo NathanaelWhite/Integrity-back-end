@@ -18,9 +18,6 @@ connection.once('open', () => {
   console.log("MongoDB database connection established");
 });
 
-app.use('/memberships', membershipRoutes);
-app.use('/users', userRoutes);
-
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}`);
 });

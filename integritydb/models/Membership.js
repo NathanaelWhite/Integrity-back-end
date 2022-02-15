@@ -6,12 +6,14 @@ const membershipSchema = new Schema({
         type: String,
         required: true,
     },
-    description: {
-        type: String
+    purchaseDate: {
+        type: Date,
+        default: Date.now
     },
     price: {
         type: Number,
         required: true,
+        min: 0.99
     },
 });
 
