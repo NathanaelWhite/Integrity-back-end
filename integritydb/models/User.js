@@ -67,7 +67,7 @@ const userSchema = new Schema({
     required: true,
   },
   gender: {
-    type: Boolean,
+    type: String,
     required: true,
   },
   email: {
@@ -77,15 +77,12 @@ const userSchema = new Schema({
     match: [/.+@.+\..+/, "Must use a valid email address"],
   },
   phoneNumber: {
-    type: String,
+    type: Number,
   },
   password: {
     type: String,
     required: true,
     minlength: 8,
-  },
-  birthday: {
-    type: Date,
   },
   address: {
     street: String,
@@ -102,7 +99,7 @@ const userSchema = new Schema({
     type: Boolean,
     required: true,
   },
-  membership: [Membership.schema]
+  membership: String
 });
 
 // set up pre-save middleware to create a password
