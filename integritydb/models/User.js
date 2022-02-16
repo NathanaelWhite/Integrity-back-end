@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
-const Membership = require('./Membership');
 const bcrypt = require("bcrypt");
 
 const statesArray = [

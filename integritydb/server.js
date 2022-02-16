@@ -12,13 +12,14 @@ const server = new ApolloServer({
   //middleware
 });
 
-server.applyMiddleware({ app });
+async function startup() {
+  await server.start();
+  server.applyMiddleware({ app });
+}
+startup();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// server up static assets
-app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
