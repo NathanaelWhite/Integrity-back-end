@@ -29,11 +29,11 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <Nav.Link href="#signup">Signup</Nav.Link>
-      <Nav.Link href="#schedule">Schedule</Nav.Link>
-      <Nav.Link href="#faq">FAQ</Nav.Link>
-      <Nav.Link href="#contact">Contact</Nav.Link>
-      <Nav.Link href="login">Login</Nav.Link>
+      <Nav.Link href="#signup" className="link-light">Signup</Nav.Link>
+      <Nav.Link href="#schedule" className="link-light">Schedule</Nav.Link>
+      <Nav.Link href="#faq" className="link-light">FAQ</Nav.Link>
+      <Nav.Link href="#contact" className="link-light">Contact</Nav.Link>
+      <Nav.Link href="login" className="link-light">Login</Nav.Link>
     </Ul>
   );
 };

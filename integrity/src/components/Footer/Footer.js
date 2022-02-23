@@ -12,9 +12,13 @@ const StyledFooter = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: #2a2f33;
-  color: white;
-  p  {
+  color: #fff;
+  p {
     margin: 10px;
+  }
+  .ftr-address {
+    text-decoration: none;
+    color: #fff;
   }
 `;
 
@@ -24,7 +28,11 @@ const Footer = () => {
       <StyledFooter>
         <Socials />
         <div>
-          <p><GeoAltFill/> 1501 Hogan Ln, Suite K Waco, TX 76705</p>
+          <a href="#contact" className="ftr-address">
+            <p>
+              <GeoAltFill /> 1501 Hogan Ln, Suite K Waco, TX 76705
+            </p>
+          </a>
         </div>
       </StyledFooter>
     </div>
