@@ -9,13 +9,17 @@ import {
 import styled from "styled-components";
 
 const StyledSocials = styled.div`
-  margin: 5px 0 0 10px;
+  margin: 0;
   display: flex;
   div {
     padding: 10px;
   }
   a {
     color: #fff;
+  }
+  @media (max-width: 768px) {
+    display; flex;
+    flex-wrap: wrap;
   }
 `;
 
