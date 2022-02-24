@@ -9,10 +9,17 @@ import {
 import styled from "styled-components";
 
 const StyledSocials = styled.div`
-  margin: 5px 0 0 10px;
+  margin: 0;
   display: flex;
   div {
     padding: 10px;
+  }
+  a {
+    color: #fff;
+  }
+  @media (max-width: 768px) {
+    display; flex;
+    flex-wrap: wrap;
   }
 `;
 
@@ -21,17 +28,28 @@ const Socials = () => {
     <>
       <StyledSocials>
         <div>
-          <Instagram />
+          <a
+            href="https://www.instagram.com/integrity_s_and_c/?hl=en"
+            target="_blank"
+          >
+            <Instagram></Instagram>
+          </a>
         </div>
         <div>
-          <Facebook />
+          <a href="https://www.facebook.com/integritysandc/" target="_blank">
+            <Facebook />
+          </a>
         </div>
 
         <div>
-          <EnvelopeOpenFill />
+          <a href="mailto:nathanaeltwhite@gmail.com" target="_blank">
+            <EnvelopeOpenFill />
+          </a>
         </div>
         <div>
-          <TelephoneFill />
+          <a href="tel">
+            <TelephoneFill />
+          </a>
         </div>
       </StyledSocials>
     </>
