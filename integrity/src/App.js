@@ -1,17 +1,19 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <>
         <Navbar />
+        <Homepage />
         <Footer />
       </>
-    </BrowserRouter>
+    </Router>
   );
 }
 
