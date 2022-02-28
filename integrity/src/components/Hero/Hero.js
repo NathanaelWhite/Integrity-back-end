@@ -36,7 +36,7 @@ const Hero = () => {
       <StyledHero>
         <h1 className="hero-title">INTEGRITY</h1>
         <h3 className="hero-sub-title">Strength & Conditioning</h3>
-        <Button variant="secondary" className="hero-btn">
+        <Button href="#" variant="secondary" className="hero-btn">
           Get Started Today
         </Button>
       </StyledHero>
