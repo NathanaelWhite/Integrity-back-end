@@ -16,7 +16,9 @@ const CoachModal = ({ coach }) => {
         <Modal.Header closeButton>
           <Modal.Title>{coach.name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{coach.bio}</Modal.Body>
+        <Modal.Body>Bio: {coach.bio}</Modal.Body>
+        <Modal.Body>Certifications: {coach.certs}</Modal.Body>
+        <Modal.Body><a href={coach.socials} target="_blank">Socials</a></Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close

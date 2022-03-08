@@ -1,21 +1,21 @@
 const coachData = [
     {
-        name: 'natty',
-        bio: 'Im human',
-        certs: 'CF L1',
-        socials: 'https://pornhub.com'
+        name: 'Brian Kost',
+        bio: 'I am the owner and head coach...',
+        certs: 'CF-L1, USAW',
+        socials: 'https://integrity-strength-conditioning.triib.com/'
     },
     {
-        name: 'BK',
-        bio: 'Im sorta a human',
-        certs: 'CF L1',
-        socials: 'https://pornhub.com'
+        name: 'Nathanael White',
+        bio: 'Coach and GM',
+        certs: 'CF-L1, SRM',
+        socials: 'https://integrity-strength-conditioning.triib.com/'
     },
     {
-        name: 'Brad',
-        bio: 'Im not human',
-        certs: 'CF L1',
-        socials: 'https://pornhub.com'
+        name: 'Bradley Shanks',
+        bio: 'Coach',
+        certs: 'CF-L1',
+        socials: 'https://integrity-strength-conditioning.triib.com/'
     }
     
 ];
