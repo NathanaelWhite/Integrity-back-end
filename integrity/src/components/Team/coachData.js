@@ -1,23 +1,22 @@
 const coachData = [
-    {
-        name: 'Brian Kost',
-        bio: 'I am the owner and head coach...',
-        certs: 'CF-L1, USAW',
-        socials: 'https://integrity-strength-conditioning.triib.com/'
-    },
-    {
-        name: 'Nathanael White',
-        bio: 'Coach and GM',
-        certs: 'CF-L1, SRM',
-        socials: 'https://integrity-strength-conditioning.triib.com/'
-    },
-    {
-        name: 'Bradley Shanks',
-        bio: 'Coach',
-        certs: 'CF-L1',
-        socials: 'https://integrity-strength-conditioning.triib.com/'
-    }
-    
+  {
+    name: "Brian Kost",
+    image: "https://via.placeholder.com/150",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    certs: "CF-L1, USAW",
+  },
+  {
+    name: "Nathanael White",
+    image: "https://via.placeholder.com/150",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    certs: "CF-L1, SRM",
+  },
+  {
+    name: "Bradley Shanks",
+    image: "https://via.placeholder.com/150",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    certs: "CF-L1",
+  },
 ];
 
-export default coachData
+export default coachData;
