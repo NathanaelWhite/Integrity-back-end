@@ -50,7 +50,7 @@ const ContactForm = () => {
             onChange={handleSelect}
             action="/"
           >
-            <Option selected value="Website" />
+            <Option defaultValue="Website" />
             <Option value="Walk In" />
             <Option value="Google/Web Search" />
             <Option value="Yelp" />
