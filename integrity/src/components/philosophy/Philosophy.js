@@ -3,7 +3,7 @@ import styled from "styled-components";
 import logoImg from "../../assets/images/integrityLogo.png";
 
 const StyledPhilo = styled.div`
-  padding: 15px 0 0 0;
+  padding: 15px 0 15px 0;
   text-align: center;
   .underline {
     width: 5rem;
