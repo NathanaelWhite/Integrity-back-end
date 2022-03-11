@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Button, Card } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 
 const CoachModal = ({ coach }) => {
   const [show, setShow] = useState(false);
@@ -16,7 +16,7 @@ const CoachModal = ({ coach }) => {
         <Modal.Header closeButton>
           <Modal.Title>{coach.name}</Modal.Title>
         </Modal.Header>
-        <img src={coach.image} alt="profile image" />
+        <img src={coach.image} alt="profile" />
         <Modal.Body>Bio: {coach.bio}</Modal.Body>
         <Modal.Body>Certifications: {coach.certs}</Modal.Body>
       </Modal>

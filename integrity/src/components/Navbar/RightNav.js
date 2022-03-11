@@ -6,6 +6,7 @@ const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
+  z-index: 1;
   li {
     padding: 18px 10px;
   }
@@ -29,10 +30,11 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <Nav.Link href="#signup">Signup</Nav.Link>
-      <Nav.Link href="#schedule">Schedule</Nav.Link>
-      <Nav.Link href="#faq">FAQ</Nav.Link>
-      <Nav.Link href="#contact">Contact</Nav.Link>
+      <Nav.Link href="/signup">Signup</Nav.Link>
+      <Nav.Link href="/memberships">Memberships</Nav.Link>
+      <Nav.Link href="/schedule">Schedule</Nav.Link>
+      <Nav.Link href="/faq">FAQ</Nav.Link>
+      <Nav.Link href="/contact">Contact</Nav.Link>
       <Nav.Link href="login">Login</Nav.Link>
     </Ul>
   );
