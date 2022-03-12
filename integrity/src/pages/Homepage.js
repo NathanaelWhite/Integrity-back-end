@@ -1,7 +1,16 @@
 import React from 'react'
+import Hero from '../components/Hero/Hero';
+import Philosophy from '../components/philosophy/Philosophy';
+import Team from '../components/Team/Team';
 
-export default function homepage() {
+const Homepage = () => {
   return (
-    <div>homepage</div>
+    <div>
+      <Hero />
+      <Philosophy />
+      <Team />
+    </div>
   )
 }
+
+export default Homepage

@@ -1,50 +1,25 @@
-import React, { useState } from "react";
-import { StyledButton, Input } from "../styles/Contact.styled";
-import { Wrapper, Form } from "../styles/Login.styled";
+import React from "react";
+import { Form, Button, Container } from "react-bootstrap";
 function Login() {
-  // const [data, setData] = useState({
-  //   email: "",
-  //   password: "",
-  // });
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(data);
-  // };
-
-  // const handleChange = (e) => {
-  //   e.preventDefault();
-  //   const { name, value } = e.target;
-  //   setData(Object.assign(data, { [name]: value }));
-  // };
-
   return (
-    <>
-      <Wrapper>
-        <Form
-        // onSubmit={handleSubmit}
-        >
-          <h2>Login to your account</h2>
-          <Input
-            type="email"
-            name="email"
-            placeholder="Email"
-            // value={data.email}
-            // onChange={handleChange}
-          />
-          <Input
-            type="password"
-            name="password"
-            placeholder="Password"
+    <Container className="bg-light border w-50 p-3">
+      <Form>
+        <h4>Login to account</h4>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+        </Form.Group>
 
-            // value={data.password}
-            // onChange={handleChange}
-          />
-          <StyledButton>Submit</StyledButton>
-          <p>Forget your Password ?</p>
-          <p>no worries, click here to reset your password.</p>
-        </Form>
-      </Wrapper>
-    </>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </Container>
   );
 }
+
 export default Login;

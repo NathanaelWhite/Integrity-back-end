@@ -8,10 +8,9 @@ const AppNavbar = () => {
     <Navbar bg="light">
       <Container>
         <div className="logo">
-          <img
-            src={logo}
-            alt="integrity logo"
-          />
+          <a href="/">
+            <img src={logo} alt="integrity logo" />
+          </a>
         </div>
         <Burger />
       </Container>

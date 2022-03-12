@@ -1,11 +1,12 @@
 import React from "react";
-import logoText from '../../assets/images/integrityText.png'
+import { Nav } from "react-bootstrap";
 import styled from 'styled-components';
 
 const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
+  z-index: 1;
   li {
     padding: 18px 10px;
   }
@@ -29,11 +30,12 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <li>Signup</li>
-      <li>Schedule</li>
-      <li>FAQ</li>
-      <li>Contact</li>
-      <li>Login</li>
+      <Nav.Link href="/signup">Signup</Nav.Link>
+      <Nav.Link href="/memberships">Memberships</Nav.Link>
+      <Nav.Link href="/schedule">Schedule</Nav.Link>
+      <Nav.Link href="/faq">FAQ</Nav.Link>
+      <Nav.Link href="/contact">Contact</Nav.Link>
+      <Nav.Link href="login">Login</Nav.Link>
     </Ul>
   );
 };
