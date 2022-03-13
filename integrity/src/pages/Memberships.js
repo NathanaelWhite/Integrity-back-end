@@ -45,19 +45,6 @@ export default function memberships() {
           </Button>
         </Card.Body>
       </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>Open Gym</Card.Title>
-          <Card.Text>$55 - Billed Monthly until cancelled</Card.Text>
-          <Card.Text>
-            Membership plan for unlimited attendances during scheduled Open Gym
-            hours
-          </Card.Text>
-          <Button variant="primary" href="#signup">
-            Select Plan
-          </Button>
-        </Card.Body>
-      </Card>
     </div>
   );
 }
