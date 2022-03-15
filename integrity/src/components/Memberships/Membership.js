@@ -6,19 +6,20 @@ const Membership = () => {
   return (
     <div>
     <h1>Membership Options</h1>
-    <Card>
+    {memData.map((membership, key) => (
+    <Card key={key}>
       <Card.Body>
-        <Card.Title>Unlimited / Month</Card.Title>
-        <Card.Text>$120 - Billed Monthly until cancelled</Card.Text>
+        <Card.Title>{membership.type}</Card.Title>
+        <Card.Text>{membership.price}</Card.Text>
         <Card.Text>
-          Our most common membership option for attending unlimited Group
-          Classes and Open Gym throughout the month.
+          {membership.description}
         </Card.Text>
-        <Button variant="primary" href="#signup">
+        <Button variant="primary" href="/signup" id={key}>
           Select Plan
         </Button>
       </Card.Body>
     </Card>
+    ))}
   </div>
   )
 }
