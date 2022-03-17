@@ -30,7 +30,6 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <Nav.Link href="/signup">Signup</Nav.Link>
       <Nav.Link href="/memberships">Memberships</Nav.Link>
       <Nav.Link href="/schedule">Schedule</Nav.Link>
       <Nav.Link href="/faq">FAQ</Nav.Link>

@@ -8,9 +8,10 @@ const Canvas = () => {
     sigPad.clear();
   };
   return (
-    <div>
-      <SignatureCanvas ref={(ref) => { sigPad = ref }}/>
-      <Button onClick={clear()}>Clear</Button>
+    <div className="sigCanvas">
+      <SignatureCanvas canvasProps={{width: 500, height: 200}}
+          ref={(ref) => { sigPad = ref }} />
+      <Button onClick={clear}>Clear Signature</Button>
     </div>
   );
 };
