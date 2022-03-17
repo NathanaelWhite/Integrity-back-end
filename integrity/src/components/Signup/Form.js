@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Button, Row, Col, InputGroup } from "react-bootstrap";
 import waiverText from "./waiver";
+import Canvas from "./Canvas";
 
 const SignupForm = () => {
   return (
@@ -103,6 +104,10 @@ const SignupForm = () => {
         </Row>
         <Row className="mb-3">
           <textarea readOnly>{waiverText}</textarea>
+        </Row>
+        <Row className="mb-3">
+          <Form.Label>* Please use your mouse/finger to sign name</Form.Label>
+          <Canvas/>
         </Row>
       </Form>
     </div>
