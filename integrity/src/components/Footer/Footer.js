@@ -6,7 +6,7 @@ import { GeoAltFill } from "react-bootstrap-icons";
 const StyledFooter = styled.div`
   left: 0;
   bottom: 0;
-  // position: absolute;
+  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;

@@ -139,7 +139,7 @@ const SignupForm = () => {
             />
           </Form.Group>
         </Row>
-        <Row className="mb-3">
+        <Row className="mb-5">
           <Button as={Col} md="12">
             Sign Up
           </Button>
