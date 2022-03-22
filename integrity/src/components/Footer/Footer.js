@@ -39,6 +39,7 @@ const StyledFooter = styled.div`
 const Footer = () => {
   return (
     <div>
+      <footer>
       <StyledFooter>
         <Socials />
         <div>
@@ -50,6 +51,7 @@ const Footer = () => {
         </div>
         <small>&copy; Copyright 2022, Integrity Strength & Conditioning</small>
       </StyledFooter>
+      </footer>
     </div>
   );
 };
