@@ -81,15 +81,12 @@ const SignupForm = () => {
             <Form.Label>Postal code</Form.Label>
             <Form.Control required type="text" placeholder="Postal code" />
           </Form.Group>
-
           <Form.Group as={Col} md="8">
             <Form.Label>
               Integrity Strength & Conditioning Liability Waiver
             </Form.Label>
           </Form.Group>
-          <textarea readOnly rows="8">
-            {waiverText}
-          </textarea>
+          <textarea readOnly>{waiverText}</textarea>
           <Form.Label>* Please use your mouse/finger to sign name</Form.Label>
           <Canvas />
           <Form.Check
