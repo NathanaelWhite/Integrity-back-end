@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
+import StyledButton from "../../Styles/StyledButton";
 import heroImg from "../../assets/images/hero.jpg";
 
 const StyledHero = styled.div`
@@ -9,7 +10,7 @@ const StyledHero = styled.div`
   background-attachment: fixed;
   margin: 0;
   padding: 10px;
-  color: #fff;
+  color: #153d7c;
   text-align: center;
   h1 {
     font-size: 3rem;
@@ -34,11 +35,11 @@ const Hero = () => {
   return (
     <div>
       <StyledHero>
-        <h1 className="hero-title">INTEGRITY</h1>
+        <h1 className="hero-title fw-bolder">INTEGRITY</h1>
         <h3 className="hero-sub-title">Strength & Conditioning</h3>
-        <Button href="/memberships" variant="secondary" className="hero-btn">
+        <StyledButton as="a" href="/memberships">
           Get Started Today
-        </Button>
+        </StyledButton>
       </StyledHero>
     </div>
   );
