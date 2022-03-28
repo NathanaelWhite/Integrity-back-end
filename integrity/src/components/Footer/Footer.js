@@ -6,6 +6,7 @@ import { GeoAltFill } from "react-bootstrap-icons";
 const StyledFooter = styled.div`
   left: 0;
   bottom: 0;
+  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -38,6 +39,7 @@ const StyledFooter = styled.div`
 const Footer = () => {
   return (
     <div>
+      <footer>
       <StyledFooter>
         <Socials />
         <div>
@@ -49,6 +51,7 @@ const Footer = () => {
         </div>
         <small>&copy; Copyright 2022, Integrity Strength & Conditioning</small>
       </StyledFooter>
+      </footer>
     </div>
   );
 };
