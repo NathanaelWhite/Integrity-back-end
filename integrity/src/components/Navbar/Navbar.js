@@ -5,7 +5,7 @@ import Burger from "./Burger";
 
 const AppNavbar = () => {
   return (
-    <Navbar bg="light">
+    <Navbar>
       <Container>
         <div className="logo">
           <a href="/">

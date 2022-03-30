@@ -3,7 +3,7 @@ import Socials from "./Socials";
 import styled from "styled-components";
 import { GeoAltFill } from "react-bootstrap-icons";
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.footer`
   left: 0;
   bottom: 0;
   position: fixed;
@@ -39,7 +39,6 @@ const StyledFooter = styled.div`
 const Footer = () => {
   return (
     <div>
-      <footer>
       <StyledFooter>
         <Socials />
         <div>
@@ -51,7 +50,6 @@ const Footer = () => {
         </div>
         <small>&copy; Copyright 2022, Integrity Strength & Conditioning</small>
       </StyledFooter>
-      </footer>
     </div>
   );
 };

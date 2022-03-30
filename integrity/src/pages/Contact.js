@@ -1,13 +1,7 @@
 import React from "react";
-import {
-  Form,
-  Button,
-  Container,
-  Row,
-  Col,
-  Stack,
-  Text,
-} from "react-bootstrap";
+import { Form, Button, Container, Row, Col, Stack } from "react-bootstrap";
+import StyledButton from "../Styles/StyledButton";
+
 function Contact() {
   return (
     <Container className="bg-light border">
@@ -39,10 +33,15 @@ function Contact() {
               <Form.Label>recaptcha</Form.Label>
               <Form.Control type="" placeholder="recaptcha" />
             </Form.Group>
-
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
+            <StyledButton>
+              <button
+                variant="primary"
+                type="submit"
+                className="button custom-btn btn-6"
+              >
+                Submit
+              </button>
+            </StyledButton>
           </Form>
         </Col>
         <Col sm={4}>
