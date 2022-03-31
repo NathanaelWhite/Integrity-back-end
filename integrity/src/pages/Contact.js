@@ -4,7 +4,7 @@ import StyledButton from "../Styles/StyledButton";
 import { GeoAltFill } from "react-bootstrap-icons";
 function Contact() {
   return (
-    <Container className="bg-light border p-4 rounded shadow p-3 mb-5 bg-body">
+    <Container className="bg-light border p-4 rounded shadow mb-5 bg-body">
       <Row>
         <Col sm={8}>
           {" "}
@@ -55,7 +55,6 @@ function Contact() {
             </Form.Group>
             <StyledButton>
               <Button
-                variant="primary"
                 type="submit"
                 className="button custom-btn btn-6"
               >
