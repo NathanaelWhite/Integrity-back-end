@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 const StyledButton = styled.div`
-  button {
-    margin: 20px;
-    outline: none;
-  }
+
   .custom-btn {
     width: 130px;
     height: 40px;
