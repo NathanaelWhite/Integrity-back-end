@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Ul = styled.ul`
   list-style: none;
@@ -10,11 +10,36 @@ const Ul = styled.ul`
   li {
     padding: 18px 10px;
   }
+  .navlinks:hover {
+    color: #040404;
+  }
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #040404;
+    cursor: pointer;
+  }
+  .hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4c4c4c;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #2A2F33;
+    background-color: #2a2f33;
     position: fixed;
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
     right: 0;
     height: 100vh;
@@ -22,7 +47,7 @@ const Ul = styled.ul`
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     li {
-      color: #fff;
+      color: #153d7c;
     }
   }
 `;
@@ -30,11 +55,24 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <Nav.Link href="/memberships">Memberships</Nav.Link>
-      <Nav.Link href="/schedule">Schedule</Nav.Link>
-      <Nav.Link href="/faq">FAQ</Nav.Link>
-      <Nav.Link href="/contact">Contact</Nav.Link>
-      <Nav.Link href="login">Login</Nav.Link>
+      <Nav.Link
+        href="/memberships"
+        className="navlinks hover-underline-animation"
+      >
+        Memberships
+      </Nav.Link>
+      <Nav.Link href="/schedule" className="navlinks hover-underline-animation">
+        Schedule
+      </Nav.Link>
+      <Nav.Link href="/faq" className="navlinks hover-underline-animation">
+        FAQ
+      </Nav.Link>
+      <Nav.Link href="/contact" className="navlinks hover-underline-animation">
+        Contact
+      </Nav.Link>
+      <Nav.Link href="login" className="navlinks hover-underline-animation">
+        Login
+      </Nav.Link>
     </Ul>
   );
 };
