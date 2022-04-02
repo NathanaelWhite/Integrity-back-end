@@ -22,8 +22,10 @@ const StyledMemberships = styled.div`
     font-size: 5rem;
   }
   .container {
-    position: relative;
-    width: 50%;
+    display: flex;
+  }
+  .card-container {
+    width: 25%;
   }
   .overlay {
     position: absolute;
@@ -31,18 +33,20 @@ const StyledMemberships = styled.div`
     left: 0;
     right: 0;
     padding: unset;
-    background-color: #008cba;
+    border: none;
+    background-color: #040404;
     overflow: hidden;
     width: 0;
-    height: 30%;
+    height: 20%;
     transition: 0.5s ease;
   }
-  .container:hover .overlay {
+  .card-container:hover .overlay {
     width: 50%;
   }
   .text {
     color: white;
     font-size: 20px;
+    text-decoration: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -50,6 +54,25 @@ const StyledMemberships = styled.div`
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     white-space: nowrap;
+  }
+  .mem-type {
+    font-size: 1.5rem;
+  }
+  .mem-price {
+    font-size: 3.5rem;
+  }
+  .mem-desc {
+    font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card-container {
+      width: 75%;
+    }
   }
 `;
 
@@ -61,18 +84,20 @@ const Membership = () => {
           <h1 className="fw-bold">PRICING</h1>
           {/* <p>Join our Community.</p> */}
         </div>
+        <div className="container">
         {memData.map((membership, key) => (
-          <Card key={key} className="container">
+          <Card key={key} className="card-container">
             <Card.Body>
-              <Card.Title>{membership.type}</Card.Title>
-              <Card.Text>{membership.price}</Card.Text>
-              <Card.Text>{membership.description}</Card.Text>
-              <button className="overlay" type="submit">
-                <div className="text">Select Plan</div>
+              <Card.Text className="mem-type fw-bold">{membership.type}</Card.Text>
+              <Card.Text className="mem-price fw-bold">{membership.price}</Card.Text>
+              <Card.Text className="mem-desc">{membership.description}</Card.Text>
+              <button  className="overlay" type="submit">
+                <a href="/signup" className="text">Select Plan</a>
               </button>
             </Card.Body>
           </Card>
         ))}
+        </div>
       </StyledMemberships>
     </div>
   );
