@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import memData from "./membershipData";
 import styled from "styled-components";
+import StyledButton from "../../Styles/StyledButton";
 import heroImg from "../../assets/images/hero.jpg";
 
 const StyledMemberships = styled.div`
@@ -32,38 +33,10 @@ const StyledMemberships = styled.div`
     margin: 3px;
     border: none;
   }
-  .overlay {
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    right: 0;
-    padding: unset;
-    border: none;
-    background-color: #040404;
-    overflow: hidden;
-    width: 0;
-    height: 20%;
-    transition: 0.5s ease;
-  }
-  .card-container:hover .overlay {
-    width: 50%;
-  }
-  .text {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-  }
   .mem-type {
     font-size: 1.5rem;
     text-align: center;
-    background-color: #153D7C;
+    background-color: #153d7c;
     color: #fff;
     padding: 5px;
   }
@@ -97,18 +70,26 @@ const Membership = () => {
           {/* <p>Join our Community.</p> */}
         </div>
         <div className="card-section m-0">
-        {memData.map((membership, key) => (
-          <Card key={key} className="card-container">
-            <Card.Body className="p-0">
-              <Card.Text className="mem-type fw-bold">{membership.type}</Card.Text>
-              <Card.Text className="mem-price fw-bold">{membership.price}</Card.Text>
-              <Card.Text className="mem-desc">{membership.description}</Card.Text>
-              <button  className="overlay" type="submit">
-                <a href="/signup" className="text">Select Plan</a>
-              </button>
-            </Card.Body>
-          </Card>
-        ))}
+          {memData.map((membership, key) => (
+            <Card key={key} className="card-container">
+              <Card.Body className="p-0">
+                <Card.Text className="mem-type fw-bold">
+                  {membership.type}
+                </Card.Text>
+                <Card.Text className="mem-price fw-bold">
+                  {membership.price}
+                </Card.Text>
+                <Card.Text className="mem-desc">
+                  {membership.description}
+                </Card.Text>
+                <StyledButton>
+                  <Button href="/signup" className="button custom-btn btn-6">
+                    Select Plan
+                  </Button>
+                </StyledButton>
+              </Card.Body>
+            </Card>
+          ))}
         </div>
       </StyledMemberships>
     </div>
@@ -116,3 +97,64 @@ const Membership = () => {
 };
 
 export default Membership;
+
+/* ~~~~~~~ INIT. BTN ~~~~~~~ */
+
+// .btn {
+//   position: relative;
+//   padding: 1.4rem 4.2rem;
+//   padding-right: 3.1rem;
+//   font-size: 1.4rem;
+//   color: var(--inv);
+//   letter-spacing: 1.1rem;
+//   text-transform: uppercase;
+//   transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+//   cursor: pointer;
+//   user-select: none;
+// }
+
+// .btn:before, .btn:after {
+//   content: '';
+//   position: absolute;
+//   transition: inherit;
+//   z-index: -1;
+// }
+
+// .btn:hover {
+//   color: var(--def);
+//   transition-delay: .5s;
+// }
+
+// .btn:hover:before {
+//   transition-delay: 0s;
+// }
+
+// .btn:hover:after {
+//   background: var(--inv);
+//   transition-delay: .35s;
+// }
+
+// /* From Left */
+
+// .from-left:before,
+// .from-left:after {
+//   top: 0;
+//   width: 0;
+//   height: 100%;
+// }
+
+// .from-left:before {
+//   right: 0;
+//   border: 1px solid var(--inv);
+//   border-left: 0;
+//   border-right: 0;
+// }
+
+// .from-left:after {
+//   left: 0;
+// }
+
+// .from-left:hover:before,
+// .from-left:hover:after {
+//   width: 100%;
+// }
