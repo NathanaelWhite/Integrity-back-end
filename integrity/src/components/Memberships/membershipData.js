@@ -3,7 +3,7 @@ const memData = [
     type: "Unlimited",
     price: "$120",
     description:
-      "Our most common membership option for attending unlimited Group Classes and Open Gym throughout the month",
+      "Common membership option for attending unlimited Group Classes and Open Gym throughout the month",
   },
   {
     type: "Couples Unlimited",
@@ -15,7 +15,7 @@ const memData = [
     type: "3x / Week",
     price: "$95",
     description:
-      "This plan allows the member to attend Group Classes and/or Open Gym for up to 3 days per week.  The week begins on Sunday and ends on Saturday.",
+      "This plan allows the member to attend Group Classes and/or Open Gym for up to 3 days per week.",
   },
   {
     type: "Open Gym",

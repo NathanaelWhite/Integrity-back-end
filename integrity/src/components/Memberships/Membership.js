@@ -1,11 +1,12 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import memData from "./membershipData";
-import StyledButton from "../../Styles/StyledButton";
 import styled from "styled-components";
 import heroImg from "../../assets/images/hero.jpg";
 
 const StyledMemberships = styled.div`
+  background-color: #040404;
+  padding-bottom: 100%;
   .mem-hero {
     height: 300px;
     color: #ffff;
@@ -21,11 +22,15 @@ const StyledMemberships = styled.div`
   h1 {
     font-size: 5rem;
   }
-  .container {
+  .card-section {
     display: flex;
+    height: 350px;
+    width: 100%;
   }
   .card-container {
-    width: 25%;
+    width: 100%;
+    margin: 3px;
+    border: none;
   }
   .overlay {
     position: absolute;
@@ -57,15 +62,22 @@ const StyledMemberships = styled.div`
   }
   .mem-type {
     font-size: 1.5rem;
+    text-align: center;
+    background-color: #153D7C;
+    color: #fff;
+    padding: 5px;
   }
   .mem-price {
     font-size: 3.5rem;
+    text-align: center;
   }
   .mem-desc {
     font-size: 1rem;
+    text-align: center;
+    margin: 0px 0px 16px;
   }
   @media (max-width: 768px) {
-    .container {
+    .card-section {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -84,10 +96,10 @@ const Membership = () => {
           <h1 className="fw-bold">PRICING</h1>
           {/* <p>Join our Community.</p> */}
         </div>
-        <div className="container">
+        <div className="card-section m-0">
         {memData.map((membership, key) => (
           <Card key={key} className="card-container">
-            <Card.Body>
+            <Card.Body className="p-0">
               <Card.Text className="mem-type fw-bold">{membership.type}</Card.Text>
               <Card.Text className="mem-price fw-bold">{membership.price}</Card.Text>
               <Card.Text className="mem-desc">{membership.description}</Card.Text>
