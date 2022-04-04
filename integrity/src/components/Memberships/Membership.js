@@ -6,8 +6,10 @@ import StyledButton from "../../Styles/StyledButton";
 import heroImg from "../../assets/images/hero.jpg";
 
 const StyledMemberships = styled.div`
-  background-color: #040404;
-  padding-bottom: 100%;
+  
+    background-color: #040404;
+    padding-bottom: 16px;
+
   .mem-hero {
     height: 300px;
     color: #ffff;
@@ -21,16 +23,31 @@ const StyledMemberships = styled.div`
     border: none;
   }
   h1 {
-    font-size: 5rem;
+    font-size: 6.5rem;
+    text-shadow: 3px 3px rgba(11, 0, 0, 0.3);
+    margin: 0;
+  }
+  h3 {
+    text-align: center;
+    color: #ffff;
+    font-size: 1.5rem;
+    text-shadow: 3px 3px rgba(11, 0, 0, 0.3);
+    margin: 30px;
+  }
+  .underline {
+    width: 50%;
+    height: 0.25rem;
+    background-color: #ffff;
+    border-radius: 10px;
+    margin: auto;
   }
   .card-section {
     display: flex;
-    height: 350px;
     width: 100%;
   }
   .card-container {
     width: 100%;
-    margin: 3px;
+    margin: 30px 5px 0px 5px;
     border: none;
   }
   .mem-type {
@@ -39,6 +56,7 @@ const StyledMemberships = styled.div`
     background-color: #153d7c;
     color: #fff;
     padding: 5px;
+    text-shadow
   }
   .mem-price {
     font-size: 3.5rem;
@@ -47,9 +65,18 @@ const StyledMemberships = styled.div`
   .mem-desc {
     font-size: 1rem;
     text-align: center;
+    height: 80px;
+    margin: 0px 0px 16px;
+  }
+  .mem-btn {
+    display: flex;
+    justify-content: center;
     margin: 0px 0px 16px;
   }
   @media (max-width: 768px) {
+    h1 {
+      font-size: 4.5rem;
+    }
     .card-section {
       display: flex;
       flex-direction: column;
@@ -67,8 +94,9 @@ const Membership = () => {
       <StyledMemberships>
         <div className="mem-hero">
           <h1 className="fw-bold">PRICING</h1>
-          {/* <p>Join our Community.</p> */}
         </div>
+        <h3 className="fw-bold">Join our Community.</h3>
+        <div className="underline"></div>
         <div className="card-section m-0">
           {memData.map((membership, key) => (
             <Card key={key} className="card-container">
@@ -82,7 +110,7 @@ const Membership = () => {
                 <Card.Text className="mem-desc">
                   {membership.description}
                 </Card.Text>
-                <StyledButton>
+                <StyledButton className="mem-btn">
                   <Button href="/signup" className="button custom-btn btn-6">
                     Select Plan
                   </Button>
