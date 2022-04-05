@@ -2,11 +2,12 @@ import React from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import waiverText from "./waiver";
 import Canvas from "./Canvas";
+import StyledButton from "../../Styles/StyledButton";
 
 const SignupForm = () => {
   return (
     <div>
-      <Form className="m-3">
+      <Form className="m-5">
         <Row className="mb-3">
           <Form.Group as={Col} md="4" controlId="validationCustom01">
             <Form.Label>First Name</Form.Label>
@@ -86,7 +87,7 @@ const SignupForm = () => {
               Integrity Strength & Conditioning Liability Waiver
             </Form.Label>
           </Form.Group>
-          <textarea readOnly>{waiverText}</textarea>
+          <textarea rows="4" class="form-control" readonly>{waiverText}</textarea>
           <Form.Label>* Please use your mouse/finger to sign name</Form.Label>
           <Canvas />
           <Form.Check
@@ -111,9 +112,11 @@ const SignupForm = () => {
               label="reCAPTCHA"
             />
           </Form.Group>
-          <Button as={Col} md="12">
+          <StyledButton>
+          <Button className="button custom-btn btn-6" as={Col} md="12">
             Sign Up
           </Button>
+          </StyledButton>
         </Row>
       </Form>
     </div>
