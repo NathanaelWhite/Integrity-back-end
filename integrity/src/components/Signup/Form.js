@@ -99,7 +99,7 @@ const SignupForm = () => {
                 Integrity Strength & Conditioning Liability Waiver
               </Form.Label>
             </Form.Group>
-            <textarea rows="4" class="form-control waiver-text" readonly>
+            <textarea rows="5" class="form-control waiver-text" readonly>
               {waiverText}
             </textarea>
             <Form.Group as={Col} md="8" className="p-0">
