@@ -30,6 +30,7 @@ const StyledFooter = styled.footer`
     }
   }
   @media (max-width: 425px) {
+    
     display: flex;
     flex-direction: column;
     padding-bottom: 8px;
