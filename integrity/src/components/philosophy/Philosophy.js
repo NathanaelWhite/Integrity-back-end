@@ -3,14 +3,15 @@ import styled from "styled-components";
 import logoImg from "../../assets/images/integrityLogo.png";
 
 const StyledPhilo = styled.div`
-  margin: 5px;
+  margin: 0px;
   padding: 15px 0 15px 0;
   text-align: center;
-  color: #153D7C;
+  color: #ffff;
+  background-color: rgba(4, 4, 4, 0.78);
   .underline {
     width: 5rem;
     height: 0.25rem;
-    background-color: #153D7C;
+    background-color: #ffff;
     border-radius: 10px;
     margin: auto;
   }
