@@ -10,12 +10,12 @@ const StyledTeam = styled.div`
   
   h1 {
     font-size: 3rem;
-    color: #153D7C;
+    color: #ffff;
   }
   .underline {
     width: 8rem;
     height: 0.25rem;
-    background-color: #153D7C;;
+    background-color: #ffff;;
     border-radius: 10px;
     margin: auto;
     margin-bottom: 5px;
