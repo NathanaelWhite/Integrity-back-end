@@ -15,7 +15,7 @@ const StyledTeam = styled.div`
   .underline {
     width: 8rem;
     height: 0.25rem;
-    background-color: #ffff;;
+    background-color: #ffff;
     border-radius: 10px;
     margin: auto;
     margin-bottom: 5px;
