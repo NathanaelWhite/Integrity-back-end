@@ -3,7 +3,7 @@ import { Container, Table } from "react-bootstrap";
 
 export default function Schedule() {
   return (
-    <Container>
+    <Container className="mt-5">
       <Table striped bordered hover>
         <thead>
           <tr>

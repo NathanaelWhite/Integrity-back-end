@@ -5,7 +5,7 @@ import StyledButton from "../Styles/StyledButton";
 function Login() {
   return (
     <div className="login">
-      <Container className="bg-body border w-50 p-4 rounded shadow opacity-75">
+      <Container className="bg-body border w-50 p-4 rounded shadow opacity-75 mt-5">
         <Form>
           <h4 className="fw-bold">Login to account</h4>
           <Form.Group className="mb-3" controlId="formBasicEmail">
