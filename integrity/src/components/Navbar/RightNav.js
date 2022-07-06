@@ -9,14 +9,15 @@ const Ul = styled.ul`
   z-index: 1;
   li {
     padding: 18px 10px;
+    
   }
   .navlinks:hover {
-    color: #040404;
+    color: #ffff;
   }
   .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: #040404;
+    color: #ffff;
     cursor: pointer;
   }
   .hover-underline-animation::after {
@@ -27,7 +28,7 @@ const Ul = styled.ul`
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #4c4c4c;
+    background-color: #CD1C1D;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
@@ -37,7 +38,7 @@ const Ul = styled.ul`
   }
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #2a2f33;
+    background-color: #040404;
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
