@@ -3,14 +3,19 @@ import styled from "styled-components";
 import logoImg from "../../assets/images/integrityLogo.png";
 
 const StyledPhilo = styled.div`
+  margin: 5px;
   padding: 15px 0 15px 0;
   text-align: center;
+  color: #153D7C;
   .underline {
     width: 5rem;
     height: 0.25rem;
-    background-color: #333;
+    background-color: #153D7C;
     border-radius: 10px;
     margin: auto;
+  }
+  h1 {
+    font-size: 3rem;
   }
   p {
     margin: 3px;
@@ -38,7 +43,7 @@ const Philosophy = () => {
         <h1>Philosophy</h1>
         <div className="underline"/>
         <div className="philoText">
-        <p>
+        <p className="fw-bold">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
