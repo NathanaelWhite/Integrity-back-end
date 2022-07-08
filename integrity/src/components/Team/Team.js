@@ -5,9 +5,8 @@ import { Card } from "react-bootstrap";
 import styled from "styled-components";
 
 const StyledTeam = styled.div`
-  padding: 15px 0 15px 0;
+  padding: 15px 0 44px 0;
   text-align: center;
-  
   h1 {
     font-size: 3rem;
     color: #ffff;
@@ -31,13 +30,16 @@ const StyledTeam = styled.div`
     flex-wrap: wrap;
     justify-content: center;
   }
+  @media (max-width: 425px) {
+    margin-bottom: 25%;
+  }
 `;
 
 const Team = () => {
   return (
     <>
       <StyledTeam>
-        <h1>Meet Our Team</h1>
+        <h1 className="fw-bold">Meet Our Team</h1>
         <div className="underline" />
         <div className="team-section">
         {coachData.map((coach, key) => (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
+import StyledButton from "../../Styles/StyledButton";
 
 const CoachModal = ({ coach }) => {
   const [show, setShow] = useState(false);
@@ -9,9 +10,11 @@ const CoachModal = ({ coach }) => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+    <StyledButton>
+      <Button className="button custom-btn btn-6" variant="primary" onClick={handleShow}>
         Learn More
       </Button>
+      </StyledButton>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{coach.name}</Modal.Title>

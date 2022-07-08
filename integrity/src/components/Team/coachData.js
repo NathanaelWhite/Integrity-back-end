@@ -12,7 +12,7 @@ const coachData = [
     certs: "CF-L1, SRM",
   },
   {
-    name: "Bradley Shanks",
+    name: "Savannah Wilson",
     image: "https://via.placeholder.com/150",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     certs: "CF-L1",
