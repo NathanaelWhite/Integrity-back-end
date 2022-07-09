@@ -24,11 +24,15 @@ const StyledTeam = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    border: none;
   }
   .team-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .card {
+    border: none;
   }
   @media (max-width: 425px) {
     margin-bottom: 25%;
@@ -45,7 +49,7 @@ const Team = () => {
         {coachData.map((coach, key) => (
           <div className="teamCards" key={key}>
             <Card style={{ width: "18rem" }} className="m-2">
-              <Card.Img variant="top" src="https://via.placeholder.com/150" />
+              <Card.Img variant="top" src={coach.image} />
               <Card.Body>
                 <Card.Title>{coach.name}</Card.Title>
                 <CoachModal coach={coach}/>
