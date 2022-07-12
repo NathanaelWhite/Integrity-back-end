@@ -8,7 +8,7 @@ const StyledTeam = styled.div`
   padding: 15px 0 44px 0;
   text-align: center;
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #ffff;
   }
   .underline {

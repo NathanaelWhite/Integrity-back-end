@@ -10,10 +10,14 @@ const CoachModal = ({ coach }) => {
 
   return (
     <>
-    <StyledButton>
-      <Button className="button custom-btn btn-6" variant="primary" onClick={handleShow}>
-        Learn More
-      </Button>
+      <StyledButton>
+        <Button
+          className="button custom-btn btn-6"
+          variant="primary"
+          onClick={handleShow}
+        >
+          Learn More
+        </Button>
       </StyledButton>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
