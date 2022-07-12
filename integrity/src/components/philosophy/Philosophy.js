@@ -10,7 +10,6 @@ const StyledPhilo = styled.div`
   color: #ffff;
   background-color: rgba(4, 4, 4, 0.78);
   .underline {
-    width: 75%;
     height: 0.25rem;
     background-color: #ffff;
     margin: 3%;
@@ -32,21 +31,26 @@ const StyledPhilo = styled.div`
   }
   .ourApproach {
     display: flex;
+    justify-content: center;
     margin: 3%;
   }
   .inThisGym {
+    margin: 5px;
+    color: #cd1c1d;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    transform: rotate(180deg);
-    margin: 3px;
-    color: #cd1c1d;
+    transform: rotate(180deg) scale(1, 1.25);
   }
   .we-list {
     list-style-type: none;
     text-align: left;
     font-size: 1.5rem;
     color: #ffff;
+    margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .we {
     color: #cd1c1d;
@@ -80,7 +84,7 @@ const Philosophy = () => {
         <div className="underline" />
         <div className="ourApproach">
           <img src={liftImg} alt="lifting weights" className="bandw-img" />
-          <h1 className="inThisGym fw-bolder">///// In This Gym /////</h1>
+          <h1 className="inThisGym fw-bolder">||| In This Gym |||</h1>
           <ul className="we-list">
             <li><strong className="we">WE</strong> SHOW RESPECT FOR ALL.</li>
             <li><strong className="we">WE</strong> HAVE A POSITIVE ATTITUDE.</li>
