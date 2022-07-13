@@ -46,17 +46,17 @@ const Team = () => {
         <h1 className="fw-bold">Meet Our Team</h1>
         <div className="underline" />
         <div className="team-section">
-        {coachData.map((coach, key) => (
-          <div className="teamCards" key={key}>
-            <Card style={{ width: "18rem" }} className="m-2">
-              <Card.Img variant="top" src={coach.image} />
-              <Card.Body>
-                <Card.Title>{coach.name}</Card.Title>
-                <CoachModal coach={coach}/>
-              </Card.Body>
-            </Card>
-          </div>
-        ))}
+          {coachData.map((coach, key) => (
+            <div className="teamCards" key={key}>
+              <Card style={{ width: "18rem" }} className="m-2">
+                <Card.Img variant="top" src={coach.image} />
+                <Card.Body>
+                  <Card.Title>{coach.name}</Card.Title>
+                  <CoachModal coach={coach} />
+                </Card.Body>
+              </Card>
+            </div>
+          ))}
         </div>
       </StyledTeam>
     </>
