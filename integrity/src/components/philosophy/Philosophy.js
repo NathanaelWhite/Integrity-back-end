@@ -65,6 +65,17 @@ const StyledPhilo = styled.div`
       width: 35%;
     }
   }
+  @media (max-width: 425px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+    .ourApproach {
+      display: none;
+    }
+  }
 `;
 
 const Philosophy = () => {
