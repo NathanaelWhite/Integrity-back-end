@@ -6,17 +6,17 @@ import { Icon } from "@iconify/react";
 import image from "../assets/images/contact.jpg";
 import styled from "styled-components";
 
-
-
-
 const StyledContact = styled.div`
   background-image: url(${image});
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-`
+`;
 function Contact() {
   return (
     <StyledContact>
-      <Container className="bg-light border p-5 rounded shadow mb-5 bg-body opacity-75">
+      <Container className="bg-light border p-5 rounded shadow bg-body opacity-75">
         <Row>
           <Col sm={8}>
             {" "}
@@ -72,7 +72,7 @@ function Contact() {
               </StyledButton>
             </Form>
           </Col>
-          <Col sm={4} className="p-3 border rounded shadow-sm">
+          <Col sm={4} className="p-3">
             <Stack gap={2} className="col-md-5 mx-auto pt-5">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.3918381964754!2d-97.11345978484755!3d31.59572128134484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864f82bed3199003%3A0x7af553e731dc5deb!2s1501%20Hogan%20Ln%2C%20Waco%2C%20TX%2076705!5e0!3m2!1sen!2sus!4v1645490767559!5m2!1sen!2sus"
